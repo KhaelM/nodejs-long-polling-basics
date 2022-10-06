@@ -6,9 +6,9 @@ class EventEmitter {
     listeners = {};
 
     fire(event) {
-        for (var k in this.listeners) {
-            let listener = this.listeners[k];
-            this.unregister(k); // unregister this listener
+        for (var id in this.listeners) {
+            let listener = this.listeners[id];
+            this.unregister(id); // unregister this listener
             listener(event);
         }
     }

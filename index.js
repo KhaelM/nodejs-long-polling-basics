@@ -20,10 +20,10 @@ app.get('/', function (req, res) {
    timer = setTimeout(function(){ 
       console.log('timeout');
       const wasUnregistered = eventEmitter.unregister(id);
-      console.log("wasUnregistered", wasUnregistered);
+      console.log("wasUnregistered", id);
       if (wasUnregistered){
          res.status(200);
-         res.end();
+         res.end('no data yet');
       }
    }, 5000);
 });
